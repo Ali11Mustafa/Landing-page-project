@@ -1,7 +1,5 @@
 import Image from 'next/image';
-
 import Logo from '../../../public/Logo/logo.svg';
-
 import BG1 from '../../../public/Footer-BG/footer-bg.svg';
 
 const Footer = () => {
@@ -37,7 +35,7 @@ const Footer = () => {
               <div className='text-md font-medium flex items-center justify-center gap-2'>
                 <h3 className='opacity-80'>Jobs</h3>
                 <p className='px-2 py-1 text-xs font-medium bg-black rounded-full'>
-                  13
+                  12
                 </p>
               </div>
               <h3 className='text-md font-medium opacity-80'>Branches</h3>
@@ -59,19 +57,19 @@ const Footer = () => {
   <div className='w-7 h-7 md:w-12 md:h-12 rounded-lg bg-white flex items-center justify-center text-primary'>
     image
   </div>
-  <span className='text-xs md:text-md font-medium'>label</span>
+  <span className='text-xs md:text-md font-medium'>Facebook</span>
 </button>
    <button className='w-[150px] h-[32px] md:w-[256px] md:h-[56px] flex items-center gap-3 px-3 py-2 rounded-lg bg-[#ffffff3d] text-white hover:bg-[#ffffff4d] transition-colors'>
   <div className='w-7 h-7 md:w-12 md:h-12 rounded-lg bg-white flex items-center justify-center text-primary'>
     image
   </div>
-  <span className='text-xs md:text-md font-medium'>label</span>
+  <span className='text-xs md:text-md font-medium'>Instagram</span>
 </button>
    <button className='w-[150px] h-[32px] md:w-[256px] md:h-[56px] flex items-center gap-3 px-3 py-2 rounded-lg bg-[#ffffff3d] text-white hover:bg-[#ffffff4d] transition-colors'>
   <div className='w-7 h-7 md:w-12 md:h-12 rounded-lg bg-white flex items-center justify-center text-primary'>
     image
   </div>
-  <span className='text-xs md:text-md font-medium'>label</span>
+  <span className='text-xs md:text-md font-medium'>Linkdein</span>
 </button>     
         </div>
       </div>
