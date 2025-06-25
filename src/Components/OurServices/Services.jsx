@@ -25,7 +25,7 @@ const ServiceCard = ({ title, description, icon }) => (
           alt={`${title} icon`}
           width={72}
           height={72}
-          className="object-contain"
+          className="object-contain "
           priority
         />
       </div>
