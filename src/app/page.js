@@ -5,12 +5,14 @@ import Hero from "@/Components/Hero/Hero";
 import Partners from "@/Components/partners/Partners";
 import Services from "@/Components/OurServices/Services";
 import CompanyPhilisophy from "@/Components/companyPhilisophy/CompanyPhilophy";
+import AboutUs from "../../src/Components/About/About";
 export default function Home() {
   return (
     <div >
       <Navbar/>
       <Hero/>
       <Partners/>
+      <AboutUs/>
       <Services/>
       <CompanyPhilisophy/>
       
