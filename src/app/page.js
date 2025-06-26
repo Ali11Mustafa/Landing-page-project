@@ -6,6 +6,7 @@ import Partners from "@/Components/partners/Partners";
 import Services from "@/Components/OurServices/Services";
 import CompanyPhilisophy from "@/Components/companyPhilisophy/CompanyPhilophy";
 import AboutUs from "../../src/Components/About/About";
+import News from "@/Components/News/News";
 export default function Home() {
   return (
     <div >
@@ -15,6 +16,8 @@ export default function Home() {
       <AboutUs/>
       <Services/>
       <CompanyPhilisophy/>
+      <News/>
+      
       
       <h1>---------</h1>
       <Footer/>
