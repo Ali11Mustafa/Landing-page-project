@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Logo from '../../../public/Logo/logo.svg';
 import BG1 from '../../../public/Footer-BG/footer-bg.svg';
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
@@ -15,7 +17,7 @@ const Footer = () => {
 
       <div className='flex flex-col md:flex-row items-center gap-3 mt-[73px]'>
         <input
-          placeholder='Your email?'
+          placeholder='Your email'
           className='w-full md:w-[349px] h-[56px] px-4 md:px-5 md:py-4 text-md bg-white rounded-full text-black placeholder:text-gray-500'
         />
 
@@ -29,7 +31,7 @@ const Footer = () => {
           <Image src={Logo} alt='Logo' className='w-[135px] h-[40px]' />
           <div className='flex gap-8'>
             <div className='flex flex-col items-start gap-6'>
-              <h3 className='text-md font-medium'>The company</h3>
+              <h3 className='text-md font-bold'>The company</h3>
               <h3 className='text-md font-medium opacity-80'>Who are we</h3>
               <h3 className='text-md font-medium opacity-80'>Services</h3>
               <div className='text-md font-medium flex items-center justify-center gap-2'>
@@ -41,7 +43,7 @@ const Footer = () => {
               <h3 className='text-md font-medium opacity-80'>Branches</h3>
             </div>
             <div className='flex flex-col items-start gap-6'>
-              <h3 className='text-md font-medium'>Help center</h3>
+              <h3 className='text-md font-bold'>Help center</h3>
               <h3 className='text-md font-medium opacity-80'>
                 Common questions
               </h3>
@@ -53,23 +55,23 @@ const Footer = () => {
           </div>
         </div>
         <div className='flex flex-col gap-4 mt-10 md:mt-0'>
-           <button className='w-[150px] h-[32px] md:w-[256px] md:h-[56px] flex items-center gap-3 px-3 py-2 rounded-lg bg-[#ffffff3d] text-white hover:bg-[#ffffff4d] transition-colors'>
-  <div className='w-7 h-7 md:w-12 md:h-12 rounded-lg bg-white flex items-center justify-center text-primary'>
-    image
+          <button className='w-[150px] h-[32px] md:w-[256px] md:h-[56px] flex items-center gap-3 px-1 py-2 rounded-full bg-[#ffffff3d] text-white hover:bg-[#ffffff4d] transition-colors'>
+  <div className='w-7 h-7 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-primary'>
+      <FaFacebook className="text-primary h-6 w-6" />
   </div>
-  <span className='text-xs md:text-md font-medium'>Facebook</span>
+  <span className='text-md md:text-md font-medium'>Facebook</span>
 </button>
-   <button className='w-[150px] h-[32px] md:w-[256px] md:h-[56px] flex items-center gap-3 px-3 py-2 rounded-lg bg-[#ffffff3d] text-white hover:bg-[#ffffff4d] transition-colors'>
-  <div className='w-7 h-7 md:w-12 md:h-12 rounded-lg bg-white flex items-center justify-center text-primary'>
-    image
+   <button className='w-[150px] h-[32px] md:w-[256px] md:h-[56px] flex items-center gap-3 px-1 py-2 rounded-full bg-[#ffffff3d] text-white hover:bg-[#ffffff4d] transition-colors'>
+  <div className='w-7 h-7 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-primary'>
+      <FaInstagram className="text-primary h-6 w-6" />
   </div>
-  <span className='text-xs md:text-md font-medium'>Instagram</span>
+  <span className='text-md md:text-md font-medium'>Instagram</span>
 </button>
-   <button className='w-[150px] h-[32px] md:w-[256px] md:h-[56px] flex items-center gap-3 px-3 py-2 rounded-lg bg-[#ffffff3d] text-white hover:bg-[#ffffff4d] transition-colors'>
-  <div className='w-7 h-7 md:w-12 md:h-12 rounded-lg bg-white flex items-center justify-center text-primary'>
-    image
+    <button className='w-[150px] h-[32px] md:w-[256px] md:h-[56px] flex items-center gap-3 px-1 py-2 rounded-full bg-[#ffffff3d] text-white hover:bg-[#ffffff4d] transition-colors'>
+  <div className='w-7 h-7 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-primary'>
+      <FaLinkedin className="text-primary h-6 w-6" />
   </div>
-  <span className='text-xs md:text-md font-medium'>Linkdein</span>
+  <span className='text-md md:text-md font-medium'>Linkedin</span>
 </button>     
         </div>
       </div>

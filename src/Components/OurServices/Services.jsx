@@ -8,12 +8,36 @@ import ContentWriting from '../../../public/ourServices/ContentWriting.png';
 import Branding from '../../../public/ourServices/Branding.png';
 
 const services = [
-  { title: 'Video Making', description: 'Random text', icon: VideoMaking },
-  { title: 'Social Media Marketing', description: 'Random text', icon: SocialMediaMarketing },
-  { title: 'Marketing Strategy', description: 'Random text', icon: MarketingStrategy },
-  { title: 'Email Marketing', description: 'Random text', icon: EmailMarketing },
-  { title: 'Content Writing', description: 'Random text', icon: ContentWriting },
-  { title: 'Branding', description: 'Random text', icon: Branding },
+  {
+    title: 'Video Making',
+    description: 'Random Content',
+    icon: VideoMaking,
+  },
+  {
+    title: 'Branding',
+    description: 'Random Content to fill the blank content',
+    icon: Branding,
+  },
+  {
+    title: 'Marketing Strategy',
+    description: 'Random Content to fill the blank content',
+    icon: MarketingStrategy,
+  },
+  {
+    title: 'Email Marketing',
+    description: 'Random Content',
+    icon: EmailMarketing,
+  },
+  {
+    title: 'Social Media Managing',
+    description: 'Random Content to fill the blank content',
+    icon: SocialMediaMarketing,
+  },
+  {
+    title: 'Content Writing',
+    description: 'Random Content to fill the blank content',
+    icon: ContentWriting,
+  },
 ];
 
 const ServiceCard = ({ title, description, icon }) => (
@@ -25,50 +49,44 @@ const ServiceCard = ({ title, description, icon }) => (
           alt={`${title} icon`}
           width={72}
           height={72}
-          className="object-contain "
+          className="object-contain"
           priority
         />
       </div>
     </div>
     <div className="max-w-[280px]">
-      <h3 className="text-white font-semibold text-md md:text-[21px] leading-snug">
-        {title}
-      </h3>
+  <h3 className="text-white font-semibold text-md md:text-[21px] leading-snug hover:text-primary hover:font-bold  transition-all duration-300 ease-in-out">
+  {title}
+</h3>
+
       <p className="text-[#646a69] text-sm mt-2">{description}</p>
     </div>
   </article>
 );
 
-const Services = () => {
-  return (
-    <section
-      aria-labelledby="services-heading"
-      className=" px-4 py-20 md:py-32 flex flex-col items-center"
-    >
-      <header className="text-center max-w-3xl mb-16">
-        <h2
-          id="services-heading"
-          className="text-2xl md:text-5xl font-bold text-white"
-        >
-          Our Services
-        </h2>
-        <p className="mt-4 text-lg text-[#646a69]">
-          Transforming your online presence with innovative digital strategies.
-        </p>
-      </header>
+const Services = () => (
+  <section
+    aria-labelledby="services-heading"
+    className="px-4 py-20 md:py-20 flex flex-col items-center"
+  >
+    <header className="text-center max-w-3xl mb-16">
+      <h2
+        id="services-heading"
+        className="text-2xl md:text-5xl font-bold text-white"
+      >
+        Our Services
+      </h2>
+      <p className="mt-4 text-lg text-[#646a69]">
+        Transforming your online presence with innovative digital strategies.
+      </p>
+    </header>
 
-      <div className="flex flex-wrap justify-center gap-x-12 gap-y-20 w-full max-w-7xl">
-        {services.map(({ title, description, icon }) => (
-          <ServiceCard
-            key={title}
-            title={title}
-            description={description}
-            icon={icon}
-          />
-        ))}
-      </div>
-    </section>
-  );
-};
+    <div className="flex flex-wrap justify-center gap-x-12 gap-y-20 w-full max-w-7xl">
+      {services.map((service) => (
+        <ServiceCard key={service.title} {...service} />
+      ))}
+    </div>
+  </section>
+);
 
 export default Services;

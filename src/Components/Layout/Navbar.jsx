@@ -5,10 +5,18 @@ import Image from 'next/image';
 import { HiMenu, HiX } from 'react-icons/hi';
 import Logo from '../../../public/Logo/logo.svg';
 
+const NAV_LINKS = [
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About us' },
+  { href: '#services', label: 'Services' },
+  { href: '#branches', label: 'Branches' },
+  { href: '#jobs', label: 'Jobs', badge: '12' },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen((prev) => !prev);
+  const handleToggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -19,22 +27,21 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Background overlay with fade transition */}
+      {/* Background Overlay */}
       <div
-        className={`fixed inset-0 z-40 md:hidden bg-black/40 backdrop-blur-2xl pointer-events-none transition-opacity duration-500 ${
+        className={`fixed inset-0 z-40 md:hidden bg-black/40 backdrop-blur-2xl transition-opacity duration-500 ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       ></div>
 
-      <nav className="w-full mt-6 px-6 text-white flex items-center justify-between md:px-22 relative z-50">
+      <nav className="w-full overflow-x-hidden mt-6 px-6 md:px-22 text-white flex items-center justify-between relative z-50">
         {/* Mobile Toggle Button */}
         <div className="md:hidden">
           <button
-            onClick={toggleMenu}
+            onClick={handleToggleMenu}
             aria-label="Toggle menu"
-            className="text-white text-2xl relative w-8 h-8 flex items-center justify-center"
+            className="text-white text-2xl w-8 h-8 relative flex items-center justify-center"
           >
-            {/* Icons with fade and rotate */}
             <HiMenu
               className={`absolute transition-all duration-300 ease-in-out transform ${
                 isOpen ? 'opacity-0 rotate-90 scale-75' : 'opacity-100 rotate-0 scale-100'
@@ -54,78 +61,62 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Nav Links */}
-        <ul className="hidden md:flex gap-x-8 items-center text-sm font-medium">
-          <li>
-            <a href="#home" className="hover:text-gray-300">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#about" className="hover:text-gray-300">
-              About us
-            </a>
-          </li>
-          <li>
-            <a href="#services" className="hover:text-gray-300">
-              Services
-            </a>
-          </li>
-          <li>
-            <a href="#branches" className="hover:text-gray-300">
-              Branches
-            </a>
-          </li>
-          <li className="flex gap-1 items-center relative">
-            <a href="#jobs" className="hover:text-gray-300">
-              Jobs
-            </a>
-            <span className="text-[12px] bg-primary px-1.5 py-0.5 rounded-full">
-              12
-            </span>
-          </li>
+        <ul className="hidden md:flex gap-x-12 items-center text-md font-medium mt-5">
+          {NAV_LINKS.map(({ href, label, badge }) => (
+            <li key={href} className="flex items-center gap-1 relative">
+              <a
+                href={href}
+                className="hover:text-primary transition-colors duration-400 font-bold"
+              >
+                {label}
+              </a>
+              {badge && (
+                <span className="text-[12px] bg-primary px-1.5 py-0.5 rounded-full">
+                  {badge}
+                </span>
+              )}
+            </li>
+          ))}
         </ul>
 
         {/* Desktop Buttons */}
-        <div className="hidden md:flex items-center space-x-4">
-          <button className="flex items-center justify-center border w-[112px] h-[47px] border-white text-white text-sm hover:bg-white hover:text-black transition px-5 py-2 rounded-full">
+        <div className="hidden md:flex items-center overflow-x-hidden space-x-4 ">
+          <button className="flex items-center justify-center font-bold border w-[130px] h-[47px] border-white text-white hover:bg-white hover:text-black rounded-full transition-colors duration-600">
             Contact us
           </button>
-          <button className="flex items-center justify-center w-[87px] h-[47px] bg-primary text-white text-sm rounded-full hover:bg-purple-700 transition px-4 py-2">
+          <button className="flex items-center justify-center w-[89px] h-[47px] bg-primary font-bold text-white rounded-full transition px-4 py-2">
             Join us
           </button>
         </div>
 
-        {/* Mobile Menu Panel with slide down/up transition */}
+        {/* Mobile Slide Menu */}
         <div
-          className={`fixed inset-x-0 top-[72px] mx-6 rounded-xl z-50 bg-transparent text-sm font-medium md:hidden text-center overflow-hidden
-            transform transition-transform duration-300 ease-in-out
-            ${isOpen ? 'max-h-[calc(100vh-72px)] opacity-100' : 'max-h-0 opacity-0'}
-          `}
+          className={`fixed inset-x-0 top-[72px] mx-6 rounded-xl z-50 bg-transparent text-sm font-medium md:hidden text-center overflow-hidden transform transition-all duration-300 ease-in-out ${
+            isOpen ? 'max-h-[calc(100vh-72px)] opacity-100' : 'max-h-0 opacity-0'
+          }`}
           style={{ transitionProperty: 'max-height, opacity' }}
         >
-          <div className="flex flex-col gap-4 px-4 py-6">
-            <a href="#home" className="hover:text-gray-300" onClick={toggleMenu}>
-              Home
-            </a>
-            <a href="#about" className="hover:text-gray-300" onClick={toggleMenu}>
-              About us
-            </a>
-            <a href="#services" className="hover:text-gray-300" onClick={toggleMenu}>
-              Services
-            </a>
-            <a href="#branches" className="hover:text-gray-300" onClick={toggleMenu}>
-              Branches
-            </a>
-            <div className="flex justify-center items-center gap-2">
-              <a href="#jobs" className="hover:text-gray-300" onClick={toggleMenu}>
-                Jobs
-              </a>
-              <span className="text-[12px] bg-primary px-1.5 py-0.5 rounded-full">12</span>
-            </div>
-            <button className="flex items-center justify-center bg-primary text-white text-sm hover:bg-purple-700 transition w-full h-[40px] rounded-xl">
-              Join US
+          <div className="flex flex-col gap-4 px-4 py-6 bg-[#161616] rounded-xl">
+            {NAV_LINKS.map(({ href, label, badge }) => (
+              <div key={href} className="flex justify-center items-center gap-2">
+                <a
+                  href={href}
+                  className="hover:text-gray-300"
+                  onClick={handleToggleMenu}
+                >
+                  {label}
+                </a>
+                {badge && (
+                  <span className="text-[12px] bg-primary px-1.5 py-0.5 rounded-full">
+                    {badge}
+                  </span>
+                )}
+              </div>
+            ))}
+            <button className="flex items-center justify-center bg-primary text-white hover:bg-purple-700 transition w-full h-[40px] rounded-xl">
+              Join Us
             </button>
-            <button className="flex items-center justify-center border border-white text-white text-sm hover:bg-white hover:text-black transition w-full h-[40px] rounded-xl">
+            <button className="flex items-center justify-center border border-white text-white hover:bg-white hover:text-black transition w-full h-[40px] rounded-xl">
               Contact Us
             </button>
           </div>

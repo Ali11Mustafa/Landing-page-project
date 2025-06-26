@@ -7,6 +7,8 @@ import Services from "@/Components/OurServices/Services";
 import CompanyPhilisophy from "@/Components/companyPhilisophy/CompanyPhilophy";
 import AboutUs from "../../src/Components/About/About";
 import News from "@/Components/News/News";
+import Pricing from "@/Components/BusinessPrices/Prices";
+import Clients from "../Components/ClientQuota/QuotaCarousel"
 export default function Home() {
   return (
     <div >
@@ -16,7 +18,12 @@ export default function Home() {
       <AboutUs/>
       <Services/>
       <CompanyPhilisophy/>
-      <News/>
+      <News />
+       <h1>-</h1>
+         <h1>-</h1>
+         <h1>-</h1>
+      <Pricing/>
+      <Clients/>
       
       
       <h1>---------</h1>

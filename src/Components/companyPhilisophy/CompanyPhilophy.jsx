@@ -35,39 +35,41 @@ const CompanyPhilosophy = () => {
     const COLORS = ["#A259FF", "#F7931A"];
 
     return (
-      <div className="py-5 rounded-xl md:w-[450px] h-[500px] bg-[#1e1e1e] flex flex-col justify-between relative">
-        <h2 className="px-4 text-xl font-bold mb-1 text-white">Primary Text</h2>
-        <p className="px-4 text-sm text-white/60">5.987,34</p>
-        <p className="px-4 text-xs mb-4 text-gray-400">Secondary text</p>
+      <div className="py-5 px-4 rounded-xl h-[500px] bg-[#1e1e1e] flex flex-col justify-between relative">
+        <h2 className="text-xl  mb-1 text-white">Primary Text</h2>
+        <p className="text-2xl font-bold text-white/70">5.987,34</p>
+        <p className="text-xs mb-4 text-gray-400">Secondary text</p>
         <div className="w-full h-[1px] bg-[#4f4f4f] mb-[30px]" />
-        <ResponsiveContainer width="100%" height={350}>
-          <PieChart>
-            <Pie
-              data={data}
-              cx="50%"
-              cy="50%"
-              innerRadius={60}
-              outerRadius={90}
-              fill="#8884d8"
-              dataKey="value"
-            >
-              {data.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-              ))}
-            </Pie>
-            <Tooltip
-              contentStyle={{ backgroundColor: "#1e1e1e", color: "#fff", borderColor: "#333" }}
-              itemStyle={{ color: "#fff" }}
-              labelStyle={{ color: "#fff" }}
-            />
-            <Legend
-              verticalAlign="bottom"
-              align="left"
-              iconType="circle"
-              wrapperStyle={{ color: "#fff" }}
-            />
-          </PieChart>
-        </ResponsiveContainer>
+        <div className="w-full h-[350px]">
+          <ResponsiveContainer width="100%" height="100%">
+            <PieChart>
+              <Pie
+                data={data}
+                cx="50%"
+                cy="50%"
+                innerRadius={60}
+                outerRadius={90}
+                fill="#8884d8"
+                dataKey="value"
+              >
+                {data.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                ))}
+              </Pie>
+              <Tooltip
+                contentStyle={{ backgroundColor: "#1e1e1e", color: "#fff", borderColor: "#333" }}
+                itemStyle={{ color: "#fff" }}
+                labelStyle={{ color: "#fff" }}
+              />
+              <Legend
+                verticalAlign="bottom"
+                align="left"
+                iconType="circle"
+                wrapperStyle={{ color: "#fff" }}
+              />
+            </PieChart>
+          </ResponsiveContainer>
+        </div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-semibold text-lg">
           {data.reduce((sum, item) => sum + item.value, 0)}%
         </div>
@@ -76,38 +78,38 @@ const CompanyPhilosophy = () => {
   };
 
   const ProfitChart = () => {
+    const data = [
+      { name: "Product 1", profit: 200 },
+      { name: "Product 2", profit: 90 },
+      { name: "Product 3", profit: 150 },
+    ];
+
+    const colors = ["#7D4283", "#F3722C", "#F8961E"];
+
     return (
-      <div className="relative p-[20px] pr-10 mt-5 bg-[#1E1E1E] rounded-lg flex flex-col justify-center drop-shadow-[0_4px_4px_#0000001A] max-w-[800px] mx-auto">
-        <h2 className="text-2xl font-bold text-white mb-4">Net Profit</h2>
-        <h3 className="text-gray-400 mb-6">2024</h3>
-        <div className="flex justify-center">
-          <BarChart
-            width={700}
-            height={350}
-            data={[
-              { name: "Product 1", profit: 200, fill: "#7D4283" },
-              { name: "Product 2", profit: 90, fill: "#F3722C" },
-              { name: "Product 3", profit: 150, fill: "#F8961E" },
-            ]}
-          >
-            <CartesianGrid strokeDasharray="3 3" stroke="#444" />
-            <XAxis dataKey="name" stroke="#fff" />
-            <YAxis stroke="#fff" />
-            <Tooltip
-              contentStyle={{ backgroundColor: "#1e1e1e", color: "#fff", borderColor: "#333" }}
-              itemStyle={{ color: "#fff" }}
-              labelStyle={{ color: "#fff" }}
-            />
-            <Bar dataKey="profit" barSize={20}>
-              {[
-                "#7D4283",
-                "#F3722C",
-                "#F8961E",
-              ].map((color, idx) => (
-                <Cell key={idx} fill={color} />
-              ))}
-            </Bar>
-          </BarChart>
+      <div className="p-[20px] h-[500px] bg-[#1E1E1E] rounded-lg flex flex-col justify-between drop-shadow-[0_4px_4px_#0000001A]">
+        <div>
+          <h2 className="text-2xl font-bold text-white mb-2">Net Profit</h2>
+          <h3 className="text-gray-400 mb-4">2024</h3>
+        </div>
+        <div className="w-full h-[350px]">
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={data}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#444" />
+              <XAxis dataKey="name" stroke="#fff" />
+              <YAxis stroke="#fff" />
+              <Tooltip
+                contentStyle={{ backgroundColor: "#1e1e1e", color: "#fff", borderColor: "#333" }}
+                itemStyle={{ color: "#fff" }}
+                labelStyle={{ color: "#fff" }}
+              />
+              <Bar dataKey="profit" barSize={20}>
+                {colors.map((color, idx) => (
+                  <Cell key={idx} fill={color} />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
         </div>
       </div>
     );
@@ -149,20 +151,19 @@ const CompanyPhilosophy = () => {
     </div>
   );
 
-const ChartSection = () => (
-  <div className="mt-[86px] flex flex-col gap-[25px]">
-    <h3 className="text-2xl font-semibold text-white">Our charts</h3>
-    <div className="flex flex-col xl:flex-row gap-[25px]">
-      <div className="w-full xl:w-1/2">
-        <ProfitChart />
-      </div>
-      <div className="w-full xl:w-1/2">
-        <DonutChart />
+  const ChartSection = () => (
+    <div className="mt-[90px] flex flex-col gap-[25px]">
+      <h3 className="text-3xl font-semibold font-bold text-white">Our charts</h3>
+      <div className="flex flex-col xl:flex-row gap-[25px]">
+        <div className="w-full xl:w-1/2">
+          <ProfitChart />
+        </div>
+        <div className="w-full xl:w-1/2">
+          <DonutChart />
+        </div>
       </div>
     </div>
-  </div>
-);
-
+  );
 
   return (
     <section className="px-6 md:px-[72px] flex flex-col">

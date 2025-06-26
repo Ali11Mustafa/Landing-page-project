@@ -21,12 +21,12 @@ const NewsCard = ({ news }) => {
           {news?.title}
         </h3>
         <div className="flex gap-4">
-          <button className="px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-full hover:bg-purple-700 transition">
-            Read More
-          </button>
-          <button className="px-4 py-2 text-sm font-medium text-purple-600 border border-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition">
-            Share
-          </button>
+         <button className='w-[94px] md:w-[98px] h-[30px] text-sm text-[#1d1f1e] border border-[#d9dedd] bg-white rounded-full'>
+        Company
+      </button>
+      <button className='w-[85px] md:w-[94px] h-[30px] text-sm text-[#1d1f1e] border border-[#d9dedd] bg-white rounded-full'>
+        Contracts
+      </button>
         </div>
       </div>
     </div>
@@ -49,32 +49,32 @@ const NewsButtons = () => {
   const NewsData = [
     {
       id: 2,
-      image: News1,
-      title:
-        'We incorporate the formation of public partnerships as a core aspect of our operations.',
-    },
-    {
-      id: 3,
       image: News2,
       title:
         'We incorporate the formation of public partnerships as a core aspect of our operations.',
     },
     {
-      id: 4,
+      id: 3,
       image: News3,
+      title:
+        'We incorporate the formation of public partnerships as a core aspect of our operations.',
+    },
+    {
+      id: 4,
+      image: News4,
       title:
         'We incorporate the formation of public partnerships as a core aspect of our operations.',
     },
   ];
   return (
-    <section className='w-full px-3 md:px-22 flex flex-col gap-[108px]'>
+    <section className='w-full px-3 md:px-22 flex mt-30 flex-col gap-[108px]'>
       <div className='flex justify-between items-center'>
-        <h2 className='text-center md:text-left text-[44px] font font-medium leading-[54px]'>
+        <h2 className='text-center md:text-left text-[44px] text-white  font-medium leading-[54px]'>
           News
         </h2>
-        <button className='hidden md:flex w-[167px] h-[55px] text-sm text-white font-medium bg-primary rounded-full'>
-          View all news
-        </button>
+       <button className="hidden md:inline-flex items-center justify-center w-[167px] h-[55px] px-4  font-bold text-white  bg-primary rounded-full leading-none whitespace-nowrap">
+  View all news
+</button>
       </div>
 
       <div className='flex flex-col md:flex-row gap-8'>
