@@ -34,10 +34,15 @@ const pricingData = [
 const PricingCard = ({ item, index, isOpen, onToggle }) => {
   const { title, description, price, badge, button } = item;
 
+  const handleClick = (e) => {
+    onToggle(index);
+    e.currentTarget.blur(); // remove focus immediately to avoid scroll jump
+  };
+
   return (
     <button
       type='button'
-      onClick={() => onToggle(index)}
+      onClick={handleClick}
       className={`md:w-[480px] rounded-xl overflow-hidden relative transition-all duration-300 ${
         isOpen ? 'bg-primary text-white' : 'bg-[#1a1a1a] text-primary'
       }`}
@@ -84,7 +89,6 @@ const PricingCard = ({ item, index, isOpen, onToggle }) => {
               <p className='mb-4 text-md text-left text-white/80'>{description}</p>
               <div className='flex items-center justify-between'>
                 <span className='text-2xl font-bold text-white'>{price}</span>
-                {/* <span>/month</span> */}
                 {button && (
                   <div className='bg-white text-neutral-800 px-4 py-2 rounded-lg font-bold'>
                     {button}

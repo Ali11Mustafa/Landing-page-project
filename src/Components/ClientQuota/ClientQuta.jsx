@@ -114,9 +114,9 @@ const QuotesCarousel = () => {
 
       <div
         ref={containerRef}
-        className='flex overflow-x-hidden snap-x snap-mandatory px-6 gap-4 w-full max-w-screen-xl scroll-smooth'
+        className='flex overflow-x-hidden snap-x snap-mandatory px-6 md:px-2 gap-4 w-full max-w-screen-xl scroll-smooth'
       >
-        <div style={{ width: '10%' }} className='shrink-0 md:w-[50%]' />
+        <div style={{ width: '10%' }} className='shrink-0 md:w-[30%]' />
 
         {clients.map((client, i) => (
           <div
@@ -137,7 +137,7 @@ const QuotesCarousel = () => {
             key={i}
             onClick={() => scrollToIndex(i)}
             className={`w-3 h-3 rounded-full ${
-              i === currentIndex ? 'bg-white' : 'bg-white/50'
+              i === currentIndex ? 'bg-black' : 'bg-white/50'
             }`}
           />
         ))}
