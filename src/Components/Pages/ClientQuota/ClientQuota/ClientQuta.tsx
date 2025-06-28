@@ -26,7 +26,7 @@ const QuoteCard: React.FC<QuoteCardProps> = ({ client }) => (
     </div>
     <p className="text-white font-semibold mt-[10px]">{client.name}</p>
     <p className="text-sm md:text-lg font-meduim text-white leading-[33px] mt-4">
-     <span>"</span>{client.quote} <span>"</span> 
+     {client.quote} 
     </p>
   </div>
 );
