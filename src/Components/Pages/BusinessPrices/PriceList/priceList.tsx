@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
-import { PricingPlan } from '../../../types/Pricing';
+import { PricingPlan } from '../../../Types/Pricing';
 import PriceBackground from '../../../../../public/price/PriceBackground.png';
 import { motion, AnimatePresence } from 'framer-motion';
 

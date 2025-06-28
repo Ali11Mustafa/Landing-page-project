@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';
 
 import { clients } from '../../../Data/quota';
-import { Client } from '../../../types/Quota';
+import { Client } from "../../../Types/Quota";
 interface QuoteCardProps {
   client: Client;
 }

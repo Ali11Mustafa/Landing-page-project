@@ -3,7 +3,7 @@
 import P1 from "../../../public/ClinetPics/client-profile.svg";
 import p2 from '../../../public/ClinetPics/Jonatan.png';
 import p3 from '../../../public/ClinetPics/Marry.png';
-import { Client } from "../types/Quota" 
+import { Client } from "../Types/Quota" 
 
 export const clients: Client[] = [
   {

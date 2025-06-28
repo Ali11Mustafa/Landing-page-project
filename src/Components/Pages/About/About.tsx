@@ -1,6 +1,6 @@
 import React from "react";
 import { aboutUsData } from "../../Data/about";
-import type { AboutParagraphPart } from "../../types/about";
+import type { AboutParagraphPart } from "../../Types/about";
 
 const AboutUs: React.FC = () => {
   return (
