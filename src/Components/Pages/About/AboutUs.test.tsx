@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import AboutUs from './About'; // adjust relative path
-import { aboutUsData } from '../../data/about'; // adjust if needed
+import { aboutUsData } from '../../Data/about'; // adjust if needed
 
 describe('AboutUs component', () => {
   test('renders heading', () => {

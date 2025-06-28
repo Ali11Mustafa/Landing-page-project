@@ -1,6 +1,6 @@
 "use client";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Cell } from "recharts";
-import { profitChartData, profitChartColors } from "../../../data/companyData";
+import { profitChartData, profitChartColors } from "../../../Data/companyData";
 
 const ProfitChart = () => {
   return (

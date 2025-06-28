@@ -1,7 +1,7 @@
 // components/News/News.tsx
 import Image from 'next/image';
 import News1 from '../../../../public/News/News-1.png';
-import { newsData } from '../../data/news';
+import { newsData } from '../../Data/news';
 import NewsCard from './NewComponents/newsCard';
 import NewsButtons from './NewComponents/newButton';
 
