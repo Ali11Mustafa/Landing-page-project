@@ -16,7 +16,7 @@ export interface AboutButton {
   link?: string;
 }
 
-export interface AboutUsData {
+export interface Abouts {
   heading: string;
   paragraphs: AboutParagraph[];
   buttons: AboutButton[];

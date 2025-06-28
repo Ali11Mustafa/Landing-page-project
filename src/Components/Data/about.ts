@@ -1,7 +1,7 @@
 // data/about.ts
-import { AboutUsData } from "../types/about"
+import { AboutUs } from "../types/About/About";
 
-export const aboutUsData: AboutUsData = {
+export const aboutUsData: AboutUs = {
   heading: "About Us",
   paragraphs: [
     {
