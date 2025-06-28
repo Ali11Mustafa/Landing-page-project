@@ -1,5 +1,5 @@
 // servicesData.ts
-import { Service } from "../Types/services";
+import { Service } from "../types/services"
 
 import VideoMaking from '../../../public/ourServices/VideoMaking.png';
 import SocialMediaMarketing from '../../../public/ourServices/SocialMediaMarketing.png';

@@ -1,4 +1,4 @@
-import { PricingPlan } from '../Types/Pricing';
+import { PricingPlan } from "../types/Pricing";
 
 export const pricingData: PricingPlan[] = [
  {
