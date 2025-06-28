@@ -5,7 +5,7 @@ import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 import { PricingPlan } from '../../../types/Pricing';
 import PriceBackground from '../../../../../public/price/PriceBackground.png';
 import { motion, AnimatePresence } from 'framer-motion';
-import pricingData  from "../../../data/pricingData";
+import { pricingData } from '../../../data/pricingData';
 
 
 interface PricingCardProps {
