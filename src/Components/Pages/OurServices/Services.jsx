@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
-import VideoMaking from '../../../public/ourServices/VideoMaking.png';
-import SocialMediaMarketing from '../../../public/ourServices/SocialMediaMarketing.png';
-import MarketingStrategy from '../../../public/ourServices/MarketingStrategy.png';
-import EmailMarketing from '../../../public/ourServices/EmailMarketing.png';
-import ContentWriting from '../../../public/ourServices/ContentWriting.png';
-import Branding from '../../../public/ourServices/Branding.png';
+import VideoMaking from '../../../../public/ourServices/VideoMaking.png';
+import SocialMediaMarketing from '../../../../public/ourServices/SocialMediaMarketing.png';
+import MarketingStrategy from '../../../../public/ourServices/MarketingStrategy.png';
+import EmailMarketing from '../../../../public/ourServices/EmailMarketing.png';
+import ContentWriting from '../../../../public/ourServices/ContentWriting.png';
+import Branding from '../../../../public/ourServices/Branding.png';
 
 const services = [
   {

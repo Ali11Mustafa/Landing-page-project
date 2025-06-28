@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
-import News1 from '../../../public/News/News-1.png';
-import News2 from '../../../public/News/News-2.png';
-import News3 from '../../../public/News/News-3.png';
-import News4 from '../../../public/News/News-4.png';
+import News1 from '../../../../public/News/News-1.png';
+import News2 from '../../../../public/News/News-2.png';
+import News3 from '../../../../public/News/News-3.png';
+import News4 from '../../../../public/News/News-4.png';
 
 const News = () => {
   const NewsCard = ({ news }) => (

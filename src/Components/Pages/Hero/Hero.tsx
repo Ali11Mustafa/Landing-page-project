@@ -1,12 +1,16 @@
+'use client';
 import Image from 'next/image';
+import React from 'react';
 
-import RightHeroTopImg from '../../../public/Hero/right-hero.svg';
-import RightHeroBottomImg from '../../../public/Hero/right-hero-bottom.svg';
-import LeftHeroBelowTextImg from '../../../public/Hero/left-hero-below-texts.svg';
+import RightHeroTopImg from '../../../../public/Hero/right-hero.svg';
+import RightHeroBottomImg from '../../../../public/Hero/right-hero-bottom.svg';
+import LeftHeroBelowTextImg from '../../../../public/Hero/left-hero-below-texts.svg';
 
-const Hero = () => {
-  const gradientText = 'bg-gradient-to-br from-primary to-[#4b2a4e] to-90% text-transparent bg-clip-text';
-  const buttonBase = 'flex items-center justify-center text-md font-bold rounded-full h-[55px]';
+const Hero: React.FC = () => {
+  const gradientText =
+    'bg-gradient-to-br from-primary to-[#4b2a4e] to-90% text-transparent bg-clip-text';
+  const buttonBase =
+    'flex items-center justify-center text-md font-bold rounded-full h-[55px]';
 
   return (
     <section className="w-full h-[700px] mb-2 px-3 mt-15 md:px-0 md:pl-22 flex justify-between overflow-hidden">
@@ -16,8 +20,7 @@ const Hero = () => {
           Transform your business with our{' '}
           <span className="text-primary">
             <span className={gradientText}>Creative</span>{' '}
-            Marketing{' '}
-            <span className={gradientText}>Solutions!</span>
+            Marketing <span className={gradientText}>Solutions!</span>
           </span>
         </h1>
 
@@ -29,10 +32,14 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col md:flex-row gap-3 mt-3">
-          <button className={`${buttonBase} bg-primary text-white md:w-[102px]`}>
+          <button
+            className={`${buttonBase} bg-primary text-white md:w-[102px]`}
+          >
             Join us
           </button>
-          <button className={`${buttonBase} border border-white text-white hover:bg-white hover:text-black transition md:w-[132px]`}>
+          <button
+            className={`${buttonBase} border border-white text-white hover:bg-white hover:text-black transition md:w-[132px]`}
+          >
             Contact us
           </button>
         </div>
@@ -40,7 +47,11 @@ const Hero = () => {
         {/* Decorative BG Left Image */}
         <div
           className="w-[488px] h-full mt-[110px] object-cover brightness-50 rounded-2xl mask-fade-bottom hidden md:flex"
-          style={{ backgroundImage: `url(${LeftHeroBelowTextImg.src})` }}
+          style={{
+            backgroundImage: `url(${LeftHeroBelowTextImg.src})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+          }}
         />
       </div>
 
@@ -49,6 +60,8 @@ const Hero = () => {
         <Image
           src={RightHeroTopImg}
           alt="Hero Top Right Image"
+          width={535}
+          height={445}
           className="w-[535px] h-[445px] object-cover rounded-2xl"
         />
         <div

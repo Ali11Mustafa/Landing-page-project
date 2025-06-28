@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import Logo from '../../../public/Logo/logo.svg';
-import BG1 from '../../../public/Footer-BG/footer-bg.svg';
+import Logo from '../../../../public/Logo/logo.svg';
+import BG1 from '../../../../public/Footer-BG/footer-bg.svg';
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {

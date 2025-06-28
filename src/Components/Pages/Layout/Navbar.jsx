@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { HiMenu, HiX } from 'react-icons/hi';
-import Logo from '../../../public/Logo/logo.svg';
+import Logo from '../../../../public/Logo/logo.svg';
 
 const NAV_LINKS = [
   { href: '#home', label: 'Home' },
