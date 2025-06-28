@@ -1,5 +1,5 @@
 import { services } from '../../data/services';
-import ServiceCard from './serviceCard';
+import ServiceCard from './ServiceCard/serviceCard';
 
 const Services = () => (
   <section

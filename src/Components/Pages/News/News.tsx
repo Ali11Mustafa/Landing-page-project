@@ -2,8 +2,8 @@
 import Image from 'next/image';
 import News1 from '../../../../public/News/News-1.png';
 import { newsData } from '../../data/news';
-import NewsCard from './UI/newsCard';
-import NewsButtons from './UI/newButton';
+import NewsCard from './NewComponents/newsCard';
+import NewsButtons from './NewComponents/newButton';
 
 const News = () => {
   return (

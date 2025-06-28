@@ -1,6 +1,6 @@
 // app/components/Clients.tsx
 import React from 'react';
-import ClientQuota from './ClientQuta';
+import ClientQuota from './ClientQuota/ClientQuta';
 
 const Clients: React.FC = () => {
   return (

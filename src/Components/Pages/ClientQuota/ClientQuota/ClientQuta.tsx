@@ -4,8 +4,8 @@ import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';
 
-import { clients } from '../../data/Quota';
-import type { Client } from '../../types/Quota';
+import { clients } from '../../../data/Quota';
+import type { Client } from '../../../types/Quota';
 
 interface QuoteCardProps {
   client: Client;

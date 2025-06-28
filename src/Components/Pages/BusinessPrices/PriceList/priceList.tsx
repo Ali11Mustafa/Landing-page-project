@@ -1,9 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
-import { PricingPlan } from '../../types/Pricing';
-import { pricingData } from '../../data/PricingData';
-import PriceBackground from '../../../../public/price/PriceBackground.png';
+import { PricingPlan } from '../../../types/Pricing';
+import { pricingData } from '../../../data/PricingData';
+import PriceBackground from '../../../../../public/price/PriceBackground.png';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface PricingCardProps {

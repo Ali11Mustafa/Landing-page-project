@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import PriceList from './priceList';
+import PriceList from './PriceList/priceList';
 
 const Pricing: React.FC = () => (
   <section className="flex flex-col mt-5 mb-6 pt-5 md:flex-row gap-8 px-6 md:px-22">
