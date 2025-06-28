@@ -2,7 +2,7 @@ import { services } from '../../data/services';
 import ServiceCard from './ServiceCard/ServiceCard';
 
 const Services = () => (
-  <section
+  <section id="services"
     aria-labelledby="services-heading"
     className="px-4 py-20 md:py-20 flex flex-col items-center"
   >

@@ -13,10 +13,10 @@ const Hero: React.FC = () => {
     'flex items-center justify-center text-md font-bold rounded-full h-[55px]';
 
   return (
-    <section className="w-full h-[700px] mb-2 px-3 mt-15 md:px-0 md:pl-22 flex justify-between overflow-hidden">
+    <section className="w-full mb-2 px-3 mt-10 md:px-0 md:pl-22 flex flex-col md:flex-row justify-between overflow-hidden min-h-[600px] md:h-[700px]">
       {/* Left Content */}
       <div className="max-w-[632px] flex flex-col justify-start gap-4">
-        <h1 className="mt-5 text-center md:text-left text-white text-[32px] md:text-[50px] font-semibold leading-[40px] md:leading-[63px]">
+        <h1 className="mt-5 text-center md:text-left text-white text-[28px] md:text-[50px] font-semibold leading-[36px] md:leading-[63px]">
           Transform your business with our{' '}
           <span className="text-primary">
             <span className={gradientText}>Creative</span>{' '}
@@ -44,9 +44,9 @@ const Hero: React.FC = () => {
           </button>
         </div>
 
-        {/* Decorative BG Left Image */}
+        {/* Decorative BG Left Image (only on md+) */}
         <div
-          className="w-[488px] h-full mt-[110px] object-cover brightness-50 rounded-2xl mask-fade-bottom hidden md:flex"
+          className="w-[488px] h-[300px] mt-[110px] object-cover brightness-50 rounded-2xl mask-fade-bottom hidden md:block"
           style={{
             backgroundImage: `url(${LeftHeroBelowTextImg.src})`,
             backgroundRepeat: 'no-repeat',
@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
         />
       </div>
 
-      {/* Right Images */}
+      {/* Right Images (only on md+) */}
       <div className="hidden md:flex flex-col gap-10">
         <Image
           src={RightHeroTopImg}
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
           className="w-[535px] h-[445px] object-cover rounded-2xl"
         />
         <div
-          className="w-[312px] h-[394px] rounded-2xl bg-cover bg-center mask-fade-bottom hidden md:flex"
+          className="w-[312px] h-[394px] rounded-2xl bg-cover bg-center mask-fade-bottom"
           style={{ backgroundImage: `url(${RightHeroBottomImg.src})` }}
         />
       </div>

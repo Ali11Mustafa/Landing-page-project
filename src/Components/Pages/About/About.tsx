@@ -4,7 +4,7 @@ import type { AboutParagraphPart } from "../../types/about";
 
 const AboutUs: React.FC = () => {
   return (
-    <section
+    <section id="about"
       className="relative flex items-center justify-center px-4 py-12 md:px-0 md:h-[626px] min-h-[500px] overflow-hidden text-white"
       aria-labelledby="about-us-heading"
     >
@@ -55,17 +55,17 @@ const AboutUs: React.FC = () => {
         ))}
 
         {/* Action Buttons */}
-        <div className="flex flex-col items-center gap-3 md:flex-row">
-          {aboutUsData.buttons.map(({ id, label, link }) => (
-            <a
-              key={id}
-              href={link ?? "#"}
-              className="w-full md:w-[148px] h-[56px] text-primary text-lg font-bold bg-transparent border border-primary rounded-full hover:bg-primary hover:text-white transition duration-300 flex items-center justify-center"
-            >
-              {label}
-            </a>
-          ))}
-        </div>
+       <div className="flex flex-col items-center gap-3 md:flex-row md:justify-center w-full px-4 md:px-0">
+  {aboutUsData.buttons.map(({ id, label, link }) => (
+    <a
+      key={id}
+      href={link ?? "#"}
+      className="w-full md:w-[148px] h-[56px] text-primary text-lg font-bold bg-transparent border border-primary rounded-full hover:bg-primary hover:text-white transition duration-300 flex items-center justify-center"
+    >
+      {label}
+    </a>
+  ))}
+</div>
       </div>
     </section>
   );

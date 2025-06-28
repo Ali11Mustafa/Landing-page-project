@@ -24,7 +24,7 @@ const PartnersItem: React.FC<PartnersItemProps> = ({ Logo }) => (
 
 const Partners: React.FC = () => {
   return (
-    <section className="flex flex-col gap-2 md:gap-16 md:mt-5 items-center justify-center">
+    <section  className="flex flex-col gap-2 md:gap-16 md:mt-5 items-center justify-center">
       <h2 className="text-lg md:text-5xl text-white leading-[60px] font-medium">
         Our Partners
       </h2>

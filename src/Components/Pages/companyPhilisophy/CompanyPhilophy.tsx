@@ -48,7 +48,7 @@ const PhilosophyContent = () => (
 const ChartsOverview = () => (
   <div className="mt-[90px] flex flex-col gap-[25px]">
     <h3 className="text-3xl font-bold text-white">Our charts</h3>
-    <div className="flex flex-col xl:flex-row gap-[25px]">
+    <div className="flex flex-col xl:flex-row gap-[45px]">
       <div className="w-full xl:w-1/2">
         <ProfitChart />
       </div>
@@ -61,7 +61,7 @@ const ChartsOverview = () => (
 
 // Main component
 const CompanyPhilosophy = () => (
-  <section className="px-6 md:px-[72px] flex flex-col">
+  <section className="px-6 md:px-[72px] flex flex-col" id="branches">
     <SectionHeading />
     <PhilosophyContent />
     <ChartsOverview />

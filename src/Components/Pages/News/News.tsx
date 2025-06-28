@@ -7,7 +7,7 @@ import NewsButtons from './NewComponents/newButton';
 
 const News = () => {
   return (
-    <section className='w-full px-3 md:px-22 flex mt-0 md:mt-30 flex-col gap-[108px]'>
+    <section id="jobs" className='w-full px-3 md:px-22 flex mt-0 md:mt-30 flex-col gap-[108px]'>
       {/* Header */}
       <div className='flex items-center justify-center md:justify-between'>
         <h2 className='text-center md:text-left text-[44px] text-white font-medium leading-[54px]'>
