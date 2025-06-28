@@ -2,7 +2,7 @@ import Image from "next/image";
 import Navbar from "../Components/Pages/Layout/Navbar";
 import Footer from "../Components/Pages/Layout/Footer"
 import Hero from "../Components/Pages/Hero/Hero";
-import Partners from "../Components/Pages/partners/Partners";
+import Partners from "../Components/Pages/Partners/Partners";
 import Services from "../Components/Pages/OurServices/Services";
 import CompanyPhilisophy from "../Components/Pages/companyPhilisophy/CompanyPhilophy";
 import AboutUs from "../Components/Pages/About/About";

@@ -1,7 +1,7 @@
 "use client";
 
 import CountUp from "react-countup";
-import { companyStats } from "../../data/Companydata";
+import { companyStats } from "../../data/companyData";
 import DonutChart from "./Charts/DountChart";
 import ProfitChart from "./Charts/ProfitChart";
 

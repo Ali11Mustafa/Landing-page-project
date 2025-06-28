@@ -1,8 +1,9 @@
 'use client';
+
 import React, { useState } from 'react';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
-import { PricingPlan } from '../../../types/Pricing';
-import { pricingData } from '../../../data/PricingData';
+import { PricingPlan } from '../../../types/pricing';
+import { pricingData } from '../../../data/pricingData';
 import PriceBackground from '../../../../../public/price/PriceBackground.png';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -13,12 +14,10 @@ interface PricingCardProps {
   onToggle: (index: number) => void;
 }
 
-const PricingCard = ({ item, index, isOpen, onToggle }: PricingCardProps) => {
-  const { title, description, price, badge, button } = item;
-
+const PricingCard: React.FC<PricingCardProps> = ({ item, index, isOpen, onToggle }) => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.currentTarget.blur(); // avoid scroll jump
     onToggle(index);
-    e.currentTarget.blur(); // remove focus immediately to avoid scroll jump
   };
 
   return (
@@ -46,10 +45,10 @@ const PricingCard = ({ item, index, isOpen, onToggle }: PricingCardProps) => {
       <div className="relative z-10">
         <div className="flex justify-between items-center px-6 py-4 cursor-pointer">
           <h3 className="text-[27px] font-medium flex items-center gap-3">
-            {title}
-            {badge && (
+            {item.title}
+            {item.badge && (
               <span className="w-[82px] h-[36px] flex items-center justify-center bg-white text-primary text-sm font-semibold rounded">
-                {badge}
+                {item.badge}
               </span>
             )}
           </h3>
@@ -58,11 +57,7 @@ const PricingCard = ({ item, index, isOpen, onToggle }: PricingCardProps) => {
               isOpen ? 'bg-[#7e6581d7]' : 'bg-primary text-white'
             }`}
           >
-            {isOpen ? (
-              <FiChevronUp className="w-5 h-5" />
-            ) : (
-              <FiChevronDown className="w-5 h-5" />
-            )}
+            {isOpen ? <FiChevronUp className="w-5 h-5" /> : <FiChevronDown className="w-5 h-5" />}
           </div>
         </div>
 
@@ -76,12 +71,14 @@ const PricingCard = ({ item, index, isOpen, onToggle }: PricingCardProps) => {
               transition={{ duration: 0.3 }}
               className="px-6 pb-8 overflow-hidden"
             >
-              <p className="mb-4 text-md font-meduim text-left text-white/80">{description}</p>
+              <p className="mb-4 text-md font-medium text-left text-white/80">
+                {item.description}
+              </p>
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-bold text-white">{price}</span>
-                {button && (
+                <span className="text-2xl font-bold text-white">{item.price}</span>
+                {item.button && (
                   <div className="bg-white text-neutral-800 px-4 py-2 rounded-lg font-bold">
-                    {button}
+                    {item.button}
                   </div>
                 )}
               </div>
@@ -93,12 +90,11 @@ const PricingCard = ({ item, index, isOpen, onToggle }: PricingCardProps) => {
   );
 };
 
-const PricingListing = () => {
+const PricingListing: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(2); // Default open: Pro
 
-  const handleToggle = (index: number) => {
+  const handleToggle = (index: number) =>
     setOpenIndex((prev) => (prev === index ? null : index));
-  };
 
   return (
     <div className="flex flex-col gap-4">

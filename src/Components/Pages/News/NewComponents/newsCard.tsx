@@ -1,6 +1,6 @@
 // components/News/NewsCard.tsx
 import Image from 'next/image';
-import { NewsItem } from "../../../types/News";
+import { NewsItem } from "../../../types/news";
 
 interface NewsCardProps {
   news: NewsItem;

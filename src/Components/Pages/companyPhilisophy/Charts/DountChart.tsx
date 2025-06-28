@@ -1,6 +1,6 @@
 "use client";
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
-import { donutChartData, donutChartColors } from "../../../data/Companydata";
+import { donutChartData, donutChartColors } from "../../../data/companyData";
 
 const DonutChart = () => {
   const total = donutChartData.reduce((sum, item) => sum + item.value, 0);

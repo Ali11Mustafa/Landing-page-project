@@ -2,7 +2,7 @@
 import News2 from "../../../public/News/News-1.png";
 import News3 from '../../../public/News/News-3.png';
 import News4 from '../../../public/News/News-4.png';
-import { NewsItem } from "../types/News";
+import { NewsItem } from "../types/news";
 
 export const newsData: NewsItem[] = [
   {
