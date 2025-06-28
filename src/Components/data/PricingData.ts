@@ -1,6 +1,6 @@
 import { PricingPlan } from '../types/Pricing';
 
-export const pricingData: PricingPlan[] = [
+const pricingData: PricingPlan[] = [
  {
   title: "Intro",
   description: "The Intro plan offers essential features, allowing you to upload HD videos with ease while catering to basic business requirements.",
@@ -24,3 +24,5 @@ export const pricingData: PricingPlan[] = [
   price: "Custom"
 }
 ];
+
+export default pricingData;
