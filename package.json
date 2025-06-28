@@ -11,6 +11,9 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
+    "compilerOptions": {
+    "baseUrl": "src"
+  },
   "dependencies": {
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
