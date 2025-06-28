@@ -4,28 +4,40 @@ import Image from 'next/image';
 import Logo from '../../../../public/Logo/logo.svg';
 import BG1 from '../../../../public/Footer-BG/footer-bg.svg';
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FormEvent } from 'react';
+
+type SocialLink = {
+  icon: React.ElementType;
+  name: string;
+  url: string;
+};
+
+type FooterLink = {
+  text: string;
+  url: string;
+  badge?: string;
+};
 
 const Footer = () => {
-  const handleEmailSubmit = (e) => {
+  const handleEmailSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Add your email submission logic here
     console.log('Email submitted');
   };
 
-  const socialLinks = [
+  const socialLinks: SocialLink[] = [
     { icon: FaFacebook, name: 'Facebook', url: '#' },
     { icon: FaInstagram, name: 'Instagram', url: '#' },
     { icon: FaLinkedin, name: 'LinkedIn', url: '#' }
   ];
 
-  const companyLinks = [
+  const companyLinks: FooterLink[] = [
     { text: 'Who are we', url: '#' },
     { text: 'Services', url: '#' },
     { text: 'Jobs', url: '#', badge: '12' },
     { text: 'Branches', url: '#' }
   ];
 
-  const helpLinks = [
+  const helpLinks: FooterLink[] = [
     { text: 'Common questions', url: '#' },
     { text: 'Contact us', url: '#' },
     { text: 'Register as merchant', url: '#' }
@@ -44,7 +56,7 @@ const Footer = () => {
         </p>
       </section>
 
-      {/* Email Registration Form */}
+      {/* Email Form */}
       <form onSubmit={handleEmailSubmit} className='flex flex-col md:flex-row items-center gap-3 mb-30'>
         <input
           type="email"
@@ -61,9 +73,9 @@ const Footer = () => {
         </button>
       </form>
 
-      {/* Footer Content */}
+      {/* Main Footer Content */}
       <div className='flex flex-col md:flex-row justify-between mb-[250px]'>
-        {/* Left Section - Logo and Links */}
+        {/* Company Info and Links */}
         <div className='flex flex-col md:flex-row gap-6 md:gap-[67px] mb-10 md:mb-0'>
           <Image 
             src={Logo} 
@@ -73,12 +85,12 @@ const Footer = () => {
           />
           
           <nav className='flex gap-8'>
-            {/* Company Links */}
+            {/* Company Section */}
             <div className='flex flex-col items-start gap-6'>
               <h3 className='text-md font-bold'>The company</h3>
-              {companyLinks.map((link, index) => (
+              {companyLinks.map((link, idx) => (
                 <a
-                  key={index}
+                  key={idx}
                   href={link.url}
                   className='text-md font-medium opacity-80 hover:opacity-100 transition-opacity flex items-center gap-2'
                   aria-label={link.text}
@@ -93,12 +105,12 @@ const Footer = () => {
               ))}
             </div>
 
-            {/* Help Center Links */}
+            {/* Help Center Section */}
             <div className='flex flex-col items-start gap-6'>
               <h3 className='text-md font-bold'>Help center</h3>
-              {helpLinks.map((link, index) => (
+              {helpLinks.map((link, idx) => (
                 <a
-                  key={index}
+                  key={idx}
                   href={link.url}
                   className='text-md font-medium opacity-80 hover:opacity-100 transition-opacity'
                   aria-label={link.text}
@@ -110,19 +122,19 @@ const Footer = () => {
           </nav>
         </div>
 
-        {/* Right Section - Social Media */}
+        {/* Social Media Section */}
         <div className='flex flex-col gap-4'>
-          {socialLinks.map((social, index) => {
-            const IconComponent = social.icon;
+          {socialLinks.map((social, idx) => {
+            const Icon = social.icon;
             return (
               <a
-                key={index}
+                key={idx}
                 href={social.url}
                 className='w-[150px] h-[32px] md:w-[256px] md:h-[56px] flex items-center gap-3 px-1 py-2 rounded-full bg-[#ffffff3d] text-white hover:bg-[#ffffff4d] focus:bg-[#ffffff4d] focus:outline-none focus:ring-2 focus:ring-white/50 transition-colors'
                 aria-label={`Visit our ${social.name} page`}
               >
                 <div className='w-7 h-7 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-primary'>
-                  <IconComponent className="text-primary h-6 w-6" />
+                  <Icon className="text-primary h-6 w-6" />
                 </div>
                 <span className='text-md md:text-md font-medium'>{social.name}</span>
               </a>
@@ -136,7 +148,7 @@ const Footer = () => {
         © 2024 Leader Express Delivery Company. All rights reserved.
       </p>
 
-      {/* Background Decoration */}
+      {/* Decorative Background */}
       <Image
         src={BG1}
         alt=''

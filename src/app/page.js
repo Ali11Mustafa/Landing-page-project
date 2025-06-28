@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Navbar from "../Components/Pages/Layout/Navbar";
-import Footer from "../Components/Pages/Layout/Footer";
+import Footer from "../Components/Pages/Layout/Footer"
 import Hero from "../Components/Pages/Hero/Hero";
 import Partners from "../Components/Pages/partners/Partners";
 import Services from "../Components/Pages/OurServices/Services";

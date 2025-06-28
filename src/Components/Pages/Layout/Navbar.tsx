@@ -5,7 +5,13 @@ import Image from 'next/image';
 import { HiMenu, HiX } from 'react-icons/hi';
 import Logo from '../../../../public/Logo/logo.svg';
 
-const NAV_LINKS = [
+interface NavLink {
+  href: string;
+  label: string;
+  badge?: string;
+}
+
+const NAV_LINKS: NavLink[] = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About us' },
   { href: '#services', label: 'Services' },
@@ -14,7 +20,7 @@ const NAV_LINKS = [
 ];
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleToggleMenu = () => setIsOpen(!isOpen);
 
@@ -80,7 +86,7 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Buttons */}
-        <div className="hidden md:flex items-center overflow-x-hidden space-x-4 ">
+        <div className="hidden md:flex items-center overflow-x-hidden space-x-4">
           <button className="flex items-center justify-center font-bold border w-[130px] h-[47px] border-white text-white hover:bg-white hover:text-black rounded-full transition-colors duration-600">
             Contact us
           </button>
