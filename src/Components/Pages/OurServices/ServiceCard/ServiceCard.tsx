@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Service } from '../../../Types/services';
+import { Service } from '../../../types/services';
 
 const ServiceCard = ({ title, description, icon }: Service) => (
   <article className="flex flex-col items-center text-center w-[152px] md:w-[384px] gap-6">
