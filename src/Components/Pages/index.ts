@@ -7,4 +7,4 @@ export { default as Navbar } from "./Layout/Navbar";
 export { default as Footer } from "./Layout/Footer";
 export { default as News } from "./News/News";
 export { default as Services } from "./OurServices/Services";
-export { default as Partners } from "./partners/Partners";
+export { default as Partners } from "./Partners/Partners";
