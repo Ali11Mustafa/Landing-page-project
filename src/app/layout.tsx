@@ -1,4 +1,5 @@
-import {  Poppins } from "next/font/google";
+import type { ReactNode } from "react";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -12,18 +13,17 @@ export const metadata = {
   title: "Focus Marketing Solutions | Creative Marketing & Digital Growth",
   description:
     "Transform your business with innovative marketing strategies, digital marketing, and social media management. Let Focus Marketing Solutions help you build something extraordinary.",
-  keywords: "marketing solutions, digital marketing, social media, creative marketing, business growth",
+  keywords:
+    "marketing solutions, digital marketing, social media, creative marketing, business growth",
   author: "Focus Marketing Solutions",
   viewport: "width=device-width, initial-scale=1",
 };
 
-
-export default function RootLayout({ children }) {
+// ✅ Add proper typing
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} `}
-      >
+      <body className={`${poppins.variable}`}>
         {children}
       </body>
     </html>
