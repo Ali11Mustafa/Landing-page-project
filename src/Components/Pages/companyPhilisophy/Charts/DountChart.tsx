@@ -21,10 +21,10 @@ const DonutChart = () => {
               innerRadius={60}
               outerRadius={90}
               dataKey="value"
-              label={({ value }) => {
-                const percent = ((value / total) * 100).toFixed(1);
-                return `${percent}%`;
-              }}
+              // label={({ value }) => {
+              //   const percent = ((value / total) * 100).toFixed(1);
+              //   return `${percent}%`;
+              // }}
               labelLine={false}
             >
               {donutChartData.map((entry, index) => (
