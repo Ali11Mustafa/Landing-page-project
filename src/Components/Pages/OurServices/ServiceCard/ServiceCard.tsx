@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import { Service } from '../../../types/services';
+import Image from "next/image";
+import { Service } from "../../../types/services";
 
 const ServiceCard = ({ title, description, icon }: Service) => (
   <article className="flex flex-col items-center text-center w-[152px] md:w-[384px] gap-6">
@@ -19,7 +19,7 @@ const ServiceCard = ({ title, description, icon }: Service) => (
       <h3 className="text-white font-semibold text-md md:text-[21px] leading-snug hover:text-primary hover:font-bold transition-all duration-300 ease-in-out">
         {title}
       </h3>
-      <p className="text-[#646a69] text-sm mt-2">{description}</p>
+      <p className="text-[#464b4a] text-sm mt-2">{description}</p>
     </div>
   </article>
 );
